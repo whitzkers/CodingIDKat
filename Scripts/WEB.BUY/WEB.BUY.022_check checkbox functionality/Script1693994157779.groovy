@@ -19,21 +19,15 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('ReuseCase/User Already Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Page_Be a Profressional Talent with Coding.ID/a_Events'))
+WebUI.callTestCase(findTestCase('ReuseCase/accessing checkout'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Page_Online event bersertifikat dari prakti_f42b96/div_Day 3 Predict using Machine Learning   _e04a14'))
+WebUI.check(findTestObject('Page_Coding.ID - Cart/check_Day3'))
 
-WebUI.click(findTestObject('Object Repository/Page_Day 3 Predict using Machine Learning - Ziyad/a_Beli Tiket'))
+WebUI.verifyElementChecked(findTestObject('Page_Coding.ID - Cart/check_Day3'), 0)
 
-WebUI.delay(2)
+WebUI.check(findTestObject('Page_Coding.ID - Cart/check_Day4'))
 
-WebUI.click(findTestObject('Page_Day 3 Predict using Machine Learning/a_eventLebih'))
-
-WebUI.click(findTestObject('Page_Online event bersertifikat dari praktisi di bidangnya/div_Day 4 Workshop'))
-
-WebUI.click(findTestObject('Page_Day 4 Workshop - Ziyad/a_Beli Tiket'))
-
-WebUI.verifyElementPresent(findTestObject('Page_Day 3 Predict using Machine Learning - Ziyad/a_eventLebih'), 0)
+WebUI.verifyElementChecked(findTestObject('Page_Coding.ID - Cart/check_Day4'), 0)
 
 WebUI.closeBrowser()
 
