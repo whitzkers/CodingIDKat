@@ -19,18 +19,27 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.maximizeWindow()
-
 WebUI.navigateToUrl('https://demo-app.online/')
 
-WebUI.click(findTestObject('Page_Be a Profressional Talent with Coding.ID/a_Masuk'))
+WebUI.click(findTestObject('Object Repository/Page_Be a Profressional Talent with Coding.ID/a_Masuk'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/input_Email_email'), GlobalVariable.EmailReuse)
+WebUI.setText(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/input_Email_email'), GlobalVariable.unveriEmail)
 
 WebUI.setEncryptedText(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/input_Kata                                 _98da12'), 
-    GlobalVariable.PasswordReuse)
+    GlobalVariable.unveriPass)
 
 WebUI.click(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/button_Login'))
+
+WebUI.click(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/span_Email harus terverifikasi'))
+
+WebUI.rightClick(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/span_Email harus terverifikasi'))
+
+WebUI.verifyElementText(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/span_Email harus terverifikasi'), 
+    'Email harus terverifikasi')
+
+WebUI.click(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/button_Verifikasi'))
+
+WebUI.verifyElementText(findTestObject('Object Repository/Page_Coding.ID - Verifikasi Email/span_Verifikasi Email'), 'Verifikasi Email')
 
 WebUI.closeBrowser()
 
