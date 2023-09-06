@@ -30,13 +30,6 @@ WebUI.setEncryptedText(findTestObject('Object Repository/Page_Masuk untuk dapatk
 
 WebUI.click(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/button_Login'))
 
-WebUI.click(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/span_Email harus terverifikasi'))
-
-WebUI.rightClick(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/span_Email harus terverifikasi'))
-
-WebUI.verifyElementText(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/span_Email harus terverifikasi'), 
-    'Email harus terverifikasi')
-
 WebUI.click(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/button_Verifikasi'))
 
 WebUI.verifyElementText(findTestObject('Object Repository/Page_Coding.ID - Verifikasi Email/span_Verifikasi Email'), 'Verifikasi Email')

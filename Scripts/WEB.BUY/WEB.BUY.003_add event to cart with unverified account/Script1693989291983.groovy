@@ -17,18 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('ReuseCase/Unverified User Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://demo-app.online/')
+WebUI.click(findTestObject('Page_Be a Profressional Talent with Coding.ID/a_Events'))
 
-WebUI.click(findTestObject('Object Repository/Page_Be a Profressional Talent with Coding.ID/a_Masuk'))
+WebUI.click(findTestObject('Page_Online event bersertifikat dari prakti_f42b96/div_Day 3 Predict using Machine Learning   _e04a14'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/input_Email_email'), GlobalVariable.unveriEmail)
+WebUI.click(findTestObject('Page_Day 3 Predict using Machine Learning - Ziyad/a_Beli Tiket'))
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/input_Kata                                 _98da12'), 
-    GlobalVariable.unveriPass)
+WebUI.waitForAlert(0)
 
-WebUI.click(findTestObject('Object Repository/Page_Masuk untuk dapatkan akses di Coding.ID/button_Login'))
+WebUI.verifyAlertPresent(0)
 
-WebUI.click(findTestObject('Page_Masuk untuk dapatkan akses di Coding.ID/button_Verifikasi'))
+WebUI.acceptAlert()
+
+WebUI.closeBrowser()
 
